@@ -22,7 +22,7 @@ export const WeatherProvider = ({children}) => {
     const [cityWeather,setCityWeather]=useState()
     useEffect(()=>{
         if (search){
-            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=ff6dd1d223aa7f28cc3fbc6770de199b`).then((res)=>setCityWeather(res.data))
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid={api key}`).then((res)=>setCityWeather(res.data))
         }else{
             setMessage("Please Enter City Name")
         }
